@@ -89,9 +89,9 @@ ASGI_APPLICATION = 'ekeassistant.asgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'EkeAssist',
+        'NAME': 'yourname',
         'CLIENT': {
-            'host': "mongodb+srv://eke:" + urllib.parse.quote_plus('kt6uqn0kss') + "@ekeassist.qtsiw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+            'host': "mongodb+srv://your_username:" + urllib.parse.quote_plus('your_password') + "@yourmongourl.qtsiw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
         },
         'OPTIONS': {
             'charset': 'utf8mb4'  # This is the important line
