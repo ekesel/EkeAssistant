@@ -13,7 +13,7 @@ export default function Devices() {
       return navigate("/login");
     }
     
-    let ws = new WebSocket('ws://127.0.0.1:8000/ws/status/1/?token='+token);
+    let ws = new WebSocket('ws://127.0.0.1:8000/ws/status/1/?token='+token); //server url here
       ws.onopen = () => {
         console.log('WebSocket Client Connected');
       };

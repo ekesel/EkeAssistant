@@ -7,7 +7,7 @@ import WeatherApi from './WeatherApi';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-const CLIENT_ID = "e52774d5c20b4085b2dbc0f0c1aba49e"
+const CLIENT_ID = "e52774d5c20b4085b2db1aba49e" //use token here of spotify
 const REDIRECT_URI = "http://localhost:3000"
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
 const RESPONSE_TYPE = "token"
@@ -115,7 +115,7 @@ function App() {
 
   function getToggle(gpio, udn) {
     let tmp = "Token "+localStorage.getItem('Token');
-    fetch("http://127.0.0.1:8000/getcommand", {
+    fetch("http://127.0.0.1:8000/getcommand", {  //server url here
       method: "POST",
       headers: {
         Accept: "application/json",

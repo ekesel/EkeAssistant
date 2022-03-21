@@ -13,7 +13,7 @@ export default function Profile() {
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "http://127.0.0.1:8000/profile", false);
+    xhr.open("GET", "http://127.0.0.1:8000/profile", false); // server url here!
     let tmp = "Token "+localStorage.getItem('Token');
     xhr.setRequestHeader("Authorization", tmp);
     xhr.send("");
