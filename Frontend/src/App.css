@@ -1,0 +1,127 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Bebas Neue', cursive;
+}
+
+#App {
+  font-family: 'Bebas Neue', cursive;
+  height: 100vh;
+  margin-left: 300px;
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+#page-wrap {
+  font-family: 'Comforter', cursive;
+  font-size: 20px;
+}
+
+#SideBar {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+#Profile {
+  margin-left: 300px;
+}
+#About {
+  margin-left: 300px;
+}
+#Devices {
+  margin-left: 300px;
+}
+#Commands {
+  margin-left: 300px;
+}
+#Register
+{
+  margin-left: 300px;
+}
+#Login 
+{
+  margin-left: 300px;
+}
+
+.container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  box-shadow: -4px 10px 35px -1px rgba(0, 0, 0, 0.75);
+  min-height: 20rem;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+button {
+  float: right;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
+}
