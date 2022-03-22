@@ -1,12 +1,13 @@
 # EkeAssistant
 A web-assistant that control your devices connected to your Raspberry Pi and perform some basic assistant tasks such as telling News, Checking Weather and connect to your Spotify to play songs. It works on Voice recognition like a assistant should!
 
-
 ## Tech Stack -
 
 Backend - Django, MongoDB atlas, Redis.
 Frontend - ReactJS, Bootstrap.
 Client - Python, Shell Scripting.
+
+Hosting this requires a Paid Server so can't make it live yet.
 
 # Installation
 
@@ -110,3 +111,22 @@ Use this article having 4 steps to make connection.py run at startup.
 
 After you are done, just restart the rpi and you can see the device getting listed in the /devices section as long as our server runs. Now you can place RPI and relay mod inside your switch box and connect it with the bulbs and fans and you can easily control them through the website from anywhere.
 
+# Explanation
+
+The basic workflow is that the user has an account which stores the devices he owns and he can toggle it whenever he wants along with little other features.
+So the backend is connected to the frontend with the help of APIs and Websockets.
+There are login, register and Profile APIs to manage a user. 
+Then there is getcommand and getlogin APIs which interacts with the Clientdevice and frontend.
+The getcommand API take the toggle command sent from Frontend and recieves it then pushes it to the websocket connected with the device.
+The getLogin API is for the initial setting up of the device to add the device to our database.
+
+There are two websockets, DeviceConsumer and StatusConsumer - DeviceConsumer is connected to the ClientDevice. This websocket is responsible to send data to client to toggle the pins according to user. 
+StatusConsumer interacts with frontend and is responsible to show the online devices to frotntend in the /devices section so that the user knows if the client device is working properly or not.
+
+Other than that, the News API, Weather API and Spotify API are directly handled by frontend as they are third party apps connected to increase features.
+The SpeechRecognition is also a npm package directly rendered by ReactJS and through the voice it gets the sentence in which the code searches for specific keywords to identify which command the user told to activate.
+
+# NOTE
+
+Please feel free to contribute to this project and add new features. This is just the prototype version and needs a lot to optimize so do contribute if you like automation.
+Through this project, you can automate your home easily.
